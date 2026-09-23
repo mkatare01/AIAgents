@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext", // 👈 Ensure this is set to NodeNext or bundler
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
