@@ -15,6 +15,11 @@ export async function executeAutomationPipeline(config: AgentConfiguration) {
     console.error(`❌ [Agent Engine] Terminal workflow broke: ${gitStep.error}`);
     return { success: false, reason: "Git Stage Failed" };
   }
+
+  if (gitStep.noChanges) {
+    console.log(`✅ [Agent Engine] No new changes to publish on branch: ${gitStep.branchName}\n`);
+    return { success: true, reason: "No Changes To Publish" };
+  }
   console.log(`✅ [Agent Engine] Changes successfully synchronized onto remote branch: ${gitStep.branchName}\n`);
 
   console.log("⚡ [Agent Engine] Starting Stage 2: Browser AI Operations");

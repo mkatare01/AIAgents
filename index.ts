@@ -15,7 +15,11 @@ async function main() {
 
   if (runtimeResult.success) {
     console.log("\n=================================================");
-    console.log(`🎉 RUN SUCCESSFUL: PR Created & Merged at ${runtimeResult.link}`);
+    if (runtimeResult.link) {
+      console.log(`🎉 RUN SUCCESSFUL: PR Created & Merged at ${runtimeResult.link}`);
+    } else {
+      console.log(`🎉 RUN SUCCESSFUL: ${runtimeResult.reason ?? "Pipeline completed with no PR to create."}`);
+    }
     console.log("=================================================");
   } else {
     console.error(`\n❌ RUN FAILED: Pipeline halted during: ${runtimeResult.reason}`);
