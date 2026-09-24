@@ -7,6 +7,7 @@
     "start": "tsx index.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
     "@browserbasehq/stagehand": "^1.0.0",
     "dotenv": "^16.4.5",
     "openai": "^4.0.0",
