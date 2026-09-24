@@ -12,9 +12,9 @@ export interface GithubAgentOptions {
 export async function runGithubWorkflowAgent(options: GithubAgentOptions) {
   const stagehand = new Stagehand({
     env: "LOCAL",
-    modelName: "gpt-4o",
+    modelName: "claude-3-5-sonnet-latest",
     modelClientOptions: {
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: process.env.ANTHROPIC_API_KEY,
     },
   });
 

@@ -1,5 +1,8 @@
 import { executeGitWorkflow } from "../tools/gitTools.js";
 import { runGithubWorkflowAgent } from "../tools/githubTools.js";
+import Anthropic from "@anthropic-ai/sdk"; // 👈 Swap OpenAI for Anthropic SDK
+import * as fs from "fs";
+
 
 export interface AgentConfiguration {
   repositoryUrl: string;
