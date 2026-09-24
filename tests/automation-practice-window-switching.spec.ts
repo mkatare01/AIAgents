@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Automation Practice Core Flows', () => {
   test('Window and tab switching', async ({ page, context }) => {
-    await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+    await page.goto('https://rahulshettyacademy.com/AutomationPractice/', { waitUntil: 'domcontentloaded' });
 
     // 1. Click Open Window.
     // Open Window/Open Tab both lead to qaclickacademy.com, a 3rd-party site that currently serves

@@ -13,7 +13,7 @@ function expectDialog(page: Page, type: 'alert' | 'confirm', action: 'accept' | 
 
 test.describe('Automation Practice Core Flows', () => {
   test('Alert and confirmation dialog handling', async ({ page }) => {
-    await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+    await page.goto('https://rahulshettyacademy.com/AutomationPractice/', { waitUntil: 'domcontentloaded' });
     const nameInput = page.getByRole('textbox', { name: 'Enter Your Name' });
 
     // 1. Enter a customer name, click Alert, and accept the alert.

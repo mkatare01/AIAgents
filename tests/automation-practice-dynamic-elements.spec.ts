@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Automation Practice Core Flows', () => {
   test('Dynamic hide/show and total amount checks', async ({ page }) => {
-    await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+    await page.goto('https://rahulshettyacademy.com/AutomationPractice/', { waitUntil: 'domcontentloaded' });
     const input = page.getByRole('textbox', { name: 'Hide/Show Example' });
 
     // 1. In the Hide/Show Example, type text in the input and click Hide.

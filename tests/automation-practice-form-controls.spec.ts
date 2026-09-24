@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Automation Practice Core Flows', () => {
   test('Form controls and selection state', async ({ page }) => {
     // 1. Load the Practice Page in a fresh browser session.
-    await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+    await page.goto('https://rahulshettyacademy.com/AutomationPractice/', { waitUntil: 'domcontentloaded' });
     await expect(page).toHaveTitle('Practice Page');
     await expect(page.getByRole('heading', { name: 'Practice Page' })).toBeVisible();
 

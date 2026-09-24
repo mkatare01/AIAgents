@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Automation Practice Core Flows', () => {
   test('Web table validation', async ({ page }) => {
-    await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+    await page.goto('https://rahulshettyacademy.com/AutomationPractice/', { waitUntil: 'domcontentloaded' });
     const table = page.getByRole('table').first();
 
     // 1. Examine the main Web Table Example and identify rows and columns.
