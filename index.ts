@@ -14,7 +14,7 @@ async function main() {
   const runtimeResult = await executeAutomationPipeline(workflowConfig);
 
   if (runtimeResult.success) {
-    console.log("\n=================================================");
+    console.log("\n================================================");
     if (runtimeResult.link) {
       console.log(`🎉 RUN SUCCESSFUL: PR Created & Merged at ${runtimeResult.link}`);
     } else {
